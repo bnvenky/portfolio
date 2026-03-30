@@ -1,9 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    swcMinify: false,
-  },
-  swcMinify: false,
+  // Next.js configuration
 }
 
 module.exports = nextConfig
