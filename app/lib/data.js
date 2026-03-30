@@ -1,0 +1,73 @@
+// ── DATA ───────────────────────────────────────────────────────────────────────
+export const DATA = {
+  name: "Bokka Naga Venkatesh",
+  email: "bnvenkatesheee@gmail.com",
+  phone: "+91 93906 47752",
+  phoneRaw: "+919390647752",
+  location: "Andhra Pradesh, India",
+  linkedin: "https://linkedin.com/in/venkatesh240",
+  github: "https://github.com/bnvenky",
+  summary: "Full-Stack Developer with hands-on production experience building scalable SaaS applications using the MERN stack. At UpInterview, I designed RESTful APIs, built 50+ form validation workflows, integrated Razorpay payment pipelines, and shipped reusable React component libraries — all in a live, multi-tenant recruitment platform.",
+  skills: {
+    "⚛️ Frontend": ["React.js", "Next.js", "React Native", "Tailwind CSS", "Zustand", "Vite"],
+    "🔧 Backend": ["Node.js", "Express.js", "GraphQL", "JWT Auth", "WebSocket", "WebRTC"],
+    "🗄️ Database": ["MongoDB", "Mongoose", "SQLite"],
+    "💻 Languages": ["JavaScript (ES6+)", "Python", "SQL"],
+    "⚙️ DevOps": ["Git", "AWS EC2", "GitHub Actions", "CI/CD"],
+    "🤖 AI Tools": ["GitHub Copilot", "Claude Code", "Cursor"],
+  },
+  experience: [
+    {
+      role: "Associate Software Developer",
+      company: "Truleeinnovate Consulting Services",
+      period: "Nov 2024 – Present",
+      location: "Andhra Pradesh, India",
+      color: "#00d4ff",
+      highlights: [
+        "Built & shipped features across 4+ core modules of UpInterview — live multi-tenant SaaS platform",
+        "Wrote 20+ REST APIs in Node.js/Express.js for scheduling, assessment delivery & billing",
+        "Built React.js UIs: dashboards, Kanban views, multi-step forms + shared component library",
+        "Wired Razorpay with full webhook handling for subscriptions, invoicing & wallet payouts",
+        "JWT auth with RBAC and Penny Drop bank verification — zero security incidents in production",
+        "Used AI tools (GitHub Copilot, Claude Code, Cursor) reducing time on repetitive tasks",
+      ],
+    },
+    {
+      role: "Software Development Trainee",
+      company: "NxtWave Disruptive Technologies",
+      period: "Aug 2022 – Jan 2024",
+      location: "Remote",
+      color: "#a78bfa",
+      highlights: [
+        "Built responsive web apps using React.js with RESTful API integration using Node.js & Express.js",
+        "Worked with MongoDB for database design and CRUD operations across full MERN stack projects",
+        "Used Git & GitHub for version control, branching, and collaborative project workflows",
+      ],
+    },
+  ],
+  project: {
+    name: "UpInterview",
+    tagline: "SaaS Recruitment & Interview Management Platform",
+    status: "Production · Live",
+    live: "http://app.upinterview.io/",
+    stack: ["React.js", "Node.js", "Express.js", "MongoDB", "Razorpay", "Twilio", "JWT", "Tailwind CSS"],
+    bullets: [
+      "Interview scheduling APIs for 3+ modes (online/offline/hybrid) with multi-round flows & auto-status tracking",
+      "Assessment engine with timed tests, real-time scoring & 1,000+ question bank (MCQ, Boolean, Numeric)",
+      "Razorpay webhooks for subscription auto-renewals, invoice generation & wallet payouts — live transactions",
+      "Responsive dashboard with Kanban/table views, drag-and-drop uploads & reusable component library",
+      "Field-level validation across 50+ forms with auto-scroll to errors for better UX",
+      "Mock interview module with skills-based candidate-interviewer matching algorithm",
+    ],
+  },
+  education: [
+    { degree: "B.Tech — Electrical & Electronics Engineering", school: "Swarnandhra College of Engineering and Technology, Narsapuram, AP", period: "Jun 2019 – Jul 2022", score: "CGPA: 7.8", icon: "🎓" },
+    { degree: "Diploma — Electrical & Electronics Engineering", school: "Smt. B. Seetha Polytechnic, Bhimavaram, AP", period: "Jun 2016 – May 2019", score: "Score: 76%", icon: "📚" },
+  ],
+  stats: [
+    { val: "20+", label: "REST APIs Built", icon: "⚡" },
+    { val: "50+", label: "Forms Validated", icon: "✅" },
+    { val: "4+", label: "Core Modules", icon: "🔧" },
+    { val: "1000+", label: "Question Bank", icon: "🎯" },
+  ],
+};
