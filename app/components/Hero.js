@@ -6,7 +6,7 @@ import { DATA } from "../lib/data";
 
 // ── HERO ──────────────────────────────────────────────────────────────────────
 export function Hero() {
-  const typed = useTypewriter(["Full-Stack Developer","MERN Stack Engineer","SaaS Builder","React.js Expert","API Architect"]);
+  const typed = useTypewriter(["Full-Stack Developer","MERN Stack Engineer","AI Automation Developer","n8n Workflow Engineer","SaaS Builder","React.js Expert","API Architect"], 90, true);
   const { isMobile, isTablet } = useBreakpoint();
   const photoSize = isMobile ? 180 : isTablet ? 210 : 260;
 

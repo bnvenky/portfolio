@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { useBreakpoint } from "../hooks/useBreakpoint";
 import { scrollTo } from "../lib/smoothScroll";
 import { DATA } from "../lib/data";
@@ -8,12 +9,28 @@ import { DATA } from "../lib/data";
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [active, setActive] = useState("about");
   const { isMobile, isTablet } = useBreakpoint();
 
   useEffect(() => {
-    const fn = () => setScrolled(window.scrollY > 40);
-    window.addEventListener("scroll", fn);
-    return () => window.removeEventListener("scroll", fn);
+    const onScroll = () => {
+      setScrolled(window.scrollY > 40);
+      const order = ["about", "skills", "experience", "project", "education", "contact"];
+      let current = "about";
+      for (let i = 0; i < order.length; i++) {
+        const el = document.getElementById(order[i]);
+        if (!el) continue;
+        const top = el.getBoundingClientRect().top;
+        if (top <= 80) {
+          current = order[i];
+        }
+      }
+      setActive(current);
+    };
+
+    onScroll();
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   const links = [
@@ -25,8 +42,12 @@ export function Navbar() {
     { label: "Contact",    id: "contact" },
   ];
 
+  const router = useRouter();
+
   const handleNav = (id) => {
-    scrollTo(id);
+    setActive(id);
+    const path = `/${id}`;
+    router.push(path);
     setMenuOpen(false);
   };
 
@@ -54,7 +75,16 @@ export function Navbar() {
           <div style={{ display: "flex", gap: isTablet ? 18 : 30 }}>
             {links.map(l => (
               <button key={l.id} onClick={() => handleNav(l.id)} className="nav-a"
-                style={{ background: "none", border: "none", fontFamily: "Manrope, sans-serif" }}>
+                style={{
+                  background: "none",
+                  border: "none",
+                  fontFamily: "Manrope, sans-serif",
+                  color: active === l.id ? "#00d4ff" : "#cbd5e1",
+                  borderBottom: active === l.id ? "2px solid #00d4ff" : "2px solid transparent",
+                  padding: "8px 6px",
+                  fontWeight: active === l.id ? 700 : 500,
+                  transition: "all 0.2s",
+                }}>
                 {l.label}
               </button>
             ))}
@@ -93,12 +123,12 @@ export function Navbar() {
           {links.map(l => (
             <button key={l.id} onClick={() => handleNav(l.id)} style={{
               background: "none", border: "none", borderBottom: "1px solid rgba(255,255,255,0.05)",
-              color: "#94a3b8", fontSize: 16, textAlign: "left",
-              padding: "13px 0", cursor: "pointer", fontFamily: "Manrope, sans-serif", fontWeight: 500,
+              color: active === l.id ? "#00d4ff" : "#94a3b8", fontSize: 16, textAlign: "left",
+              padding: "13px 0", cursor: "pointer", fontFamily: "Manrope, sans-serif", fontWeight: active === l.id ? 700 : 500,
               transition: "color 0.2s",
             }}
             onMouseEnter={e => e.currentTarget.style.color = "#00d4ff"}
-            onMouseLeave={e => e.currentTarget.style.color = "#94a3b8"}>
+            onMouseLeave={e => e.currentTarget.style.color = active === l.id ? "#00d4ff" : "#94a3b8"}>
               {l.label}
             </button>
           ))}

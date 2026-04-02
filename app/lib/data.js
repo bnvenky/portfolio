@@ -7,21 +7,21 @@ export const DATA = {
   location: "Andhra Pradesh, India",
   linkedin: "https://linkedin.com/in/venkatesh240",
   github: "https://github.com/bnvenky",
-  summary: "Full-Stack Developer with hands-on production experience building scalable SaaS applications using the MERN stack. At UpInterview, I designed RESTful APIs, built 50+ form validation workflows, integrated Razorpay payment pipelines, and shipped reusable React component libraries — all in a live, multi-tenant recruitment platform.",
+  summary: "Full-Stack Developer turned AI Automation Developer after completing a fast-track n8n automation training course. I build scalable SaaS applications and end-to-end automated workflows (webhook → sheets → AI reply → multichannel delivery) with strong experience at UpInterview — REST APIs, Razorpay, Twilio, reusable React ecosystems, and workflow automation.",
   skills: {
     "⚛️ Frontend": ["React.js", "Next.js", "React Native", "Tailwind CSS", "Zustand", "Vite"],
     "🔧 Backend": ["Node.js", "Express.js", "GraphQL", "JWT Auth", "WebSocket", "WebRTC"],
     "🗄️ Database": ["MongoDB", "Mongoose", "SQLite"],
     "💻 Languages": ["JavaScript (ES6+)", "Python", "SQL"],
     "⚙️ DevOps": ["Git", "AWS EC2", "GitHub Actions", "CI/CD"],
-    "🤖 AI Tools": ["GitHub Copilot", "Claude Code", "Cursor"],
+    "🤖 AI/ML Tools": ["GitHub Copilot", "Claude Code", "Cursor", "n8n"],
   },
   experience: [
     {
       role: "Associate Software Developer",
       company: "Truleeinnovate Consulting Services",
       period: "Nov 2024 – Present",
-      location: "Andhra Pradesh, India",
+      location: "Remote",
       color: "#00d4ff",
       highlights: [
         "Built & shipped features across 4+ core modules of UpInterview — live multi-tenant SaaS platform",
@@ -53,6 +53,7 @@ export const DATA = {
     stack: ["React.js", "Node.js", "Express.js", "MongoDB", "Razorpay", "Twilio", "JWT", "Tailwind CSS"],
     bullets: [
       "Interview scheduling APIs for 3+ modes (online/offline/hybrid) with multi-round flows & auto-status tracking",
+      "Implemented end-to-end n8n automation pipeline (webhook capture → Google Sheets logging → Groq AI response → WhatsApp + SMTP dispatch) as part of AI automation skill growth",
       "Assessment engine with timed tests, real-time scoring & 1,000+ question bank (MCQ, Boolean, Numeric)",
       "Razorpay webhooks for subscription auto-renewals, invoice generation & wallet payouts — live transactions",
       "Responsive dashboard with Kanban/table views, drag-and-drop uploads & reusable component library",
@@ -60,6 +61,37 @@ export const DATA = {
       "Mock interview module with skills-based candidate-interviewer matching algorithm",
     ],
   },
+  projects: [
+    {
+      name: "UpInterview",
+      tagline: "SaaS Recruitment & Interview Management Platform",
+      status: "Production · Live",
+      live: "http://app.upinterview.io/",
+      stack: ["React.js", "Node.js", "Express.js", "MongoDB", "Razorpay", "Twilio", "JWT", "Tailwind CSS"],
+      bullets: [
+        "Interview scheduling APIs for 3+ modes (online/offline/hybrid) with multi-round flows & auto-status tracking",
+        "Implemented end-to-end n8n automation pipeline (webhook capture → Google Sheets logging → Groq AI response → WhatsApp + SMTP dispatch) as part of AI automation skill growth",
+        "Assessment engine with timed tests, real-time scoring & 1,000+ question bank (MCQ, Boolean, Numeric)",
+        "Razorpay webhooks for subscription auto-renewals, invoice generation & wallet payouts — live transactions",
+        "Responsive dashboard with Kanban/table views, drag-and-drop uploads & reusable component library",
+        "Field-level validation across 50+ forms with auto-scroll to errors for better UX",
+        "Mock interview module with skills-based candidate-interviewer matching algorithm",
+      ],
+    },
+    {
+      name: "Lead Capture Automation System",
+      tagline: "n8n + Groq AI + WhatsApp + Email workflow",
+      status: "",
+      live: "",
+      stack: ["n8n", "Groq AI", "UltraMsg WhatsApp API", "Google Sheets", "SMTP Email"],
+      bullets: [
+        "Built 7-step automated pipeline: webhook trigger → field enrichment → Google Sheets logging → AI response generation → multi-channel dispatch",
+        "Delivered fully automated lead follow-up via WhatsApp and email with error handling and retries",
+        "Implemented audit trail and monitoring in Google Sheets for quality and reporting",
+        "Focused on clean project presentation with beautiful UI cards and concise copy",
+      ],
+    },
+  ],
   education: [
     { degree: "B.Tech — Electrical & Electronics Engineering", school: "Swarnandhra College of Engineering and Technology, Narsapuram, AP", period: "Jun 2019 – Jul 2022", score: "CGPA: 7.8", icon: "🎓" },
     { degree: "Diploma — Electrical & Electronics Engineering", school: "Smt. B. Seetha Polytechnic, Bhimavaram, AP", period: "Jun 2016 – May 2019", score: "Score: 76%", icon: "📚" },
